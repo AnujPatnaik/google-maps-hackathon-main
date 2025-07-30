@@ -56,10 +56,7 @@ load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
-(CORS(app, origins=[
-    "https://google-maps-hackathon-main.vercel.app/",
-    "https://pickupcoordinator-production.up.railway.app"
-])
+CORS(app, origins=["https://google-maps-hackathon-main.vercel.app"])
  
 
 
