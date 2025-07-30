@@ -56,8 +56,10 @@ load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app, origins=["https://google-maps-hackathon-rmv0k2r1z-patnaikanuj-2882s-projects.vercel.app"])
-@app.route("/cors-test")
+CORS(app, origins=[
+    "https://google-maps-hackathon-main-1jjipchg1-patnaikanuj-2882s-projects.vercel.app",
+    "https://pickupcoordinator-production.up.railway.app"
+])@app.route("/cors-test")
 def test_cors():
     return {"message": "CORS is working!"}
 
