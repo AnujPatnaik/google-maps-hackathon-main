@@ -846,6 +846,9 @@ def process_coordinates():
         "status": "success",
         "message": "Coordinates received"
     })
+@app.route("/cors-test")
+def test_cors():
+    return {"message": "CORS is working!"}
 
 
 @app.route('/api/upload-image', methods=['POST'])
