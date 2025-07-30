@@ -30,7 +30,8 @@ import time
 
 import math
 
-gemini_client = genai.Client(api_key="AIzaSyAFUXCQVtLNiih9GcAS1y8gzdVsFzZts1Y")
+
+gemini_client = genai.Client(api_key=process.env.GEMINI_API_KEY)
 
 def get_building_type_with_gemini(objects, scene, ocr_text, mask_area, geolocation=None):
     prompt = f"""
