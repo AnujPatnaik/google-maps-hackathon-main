@@ -56,7 +56,10 @@ load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app, origins=["https://google-maps-hackathon-main.vercel.app"])
+CORS(app, origins=[
+    "https://google-maps-hackathon-main.vercel.app",
+    "https://google-maps-hackathon-main-fz2zyafq9-patnaikanuj-2882s-projects.vercel.app"
+])
 
 
 # Configure upload folder
@@ -845,7 +848,10 @@ def process_coordinates():
 
 
 @app.route('/api/upload-image', methods=['POST'])
-@CORS(origins=['https://google-maps-hackathon-main.vercel.app'])
+@CORS(origins=[
+    "https://google-maps-hackathon-main.vercel.app",
+    "https://google-maps-hackathon-main-fz2zyafq9-patnaikanuj-2882s-projects.vercel.app"
+])
 def upload_image():
     try:
         if 'image' not in request.files:
