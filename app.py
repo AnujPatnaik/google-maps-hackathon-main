@@ -56,7 +56,10 @@ load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app, origins=["https://google-maps-hackathon-3bhzfi0yq-patnaikanuj-2882s-projects.vercel.app"])
+CORS(app, origins=["https://google-maps-hackathon-rmv0k2r1z-patnaikanuj-2882s-projects.vercel.app"])
+@app.route("/cors-test")
+def test_cors():
+    return {"message": "CORS is working!"}
 
 
 # Configure upload folder
@@ -842,9 +845,7 @@ def process_coordinates():
         "status": "success",
         "message": "Coordinates received"
     })
-@app.route("/cors-test")
-def test_cors():
-    return {"message": "CORS is working!"}
+
 
 @app.route('/api/upload-image', methods=['POST'])
 def upload_image():
