@@ -57,7 +57,6 @@ load_dotenv()
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app, origins=["https://google-maps-hackathon-main.vercel.app"])
- 
 
 
 # Configure upload folder
@@ -843,6 +842,7 @@ def process_coordinates():
         "status": "success",
         "message": "Coordinates received"
     })
+
 
 @app.route('/api/upload-image', methods=['POST'])
 @CORS(origins=['https://google-maps-hackathon-main.vercel.app'])
