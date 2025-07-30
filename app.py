@@ -56,7 +56,7 @@ load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app, origins=["https://google-maps-hackathon-rmv0k2r1z-patnaikanuj-2882s-projects.vercel.app"])
+CORS(app, origins=["google-maps-hackathon-main-1jjipchg1-patnaikanuj-2882s-projects.vercel.app"])
 
 
 # Configure upload folder
