@@ -845,6 +845,7 @@ def process_coordinates():
     })
 
 @app.route('/api/upload-image', methods=['POST'])
+@CORS(origins=['https://google-maps-hackathon-main.vercel.app'])
 def upload_image():
     try:
         if 'image' not in request.files:
