@@ -53,6 +53,7 @@ click==8.1.8
 
 # Audio / Speech
 SpeechRecognition==3.14.1
+--find-links https://github.com/intxcc/pyaudio_portaudio/releases/download/v0.2.11/
 PyAudio==0.2.14
 
 # Utility & NLP
