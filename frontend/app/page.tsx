@@ -186,7 +186,7 @@ export default function Home() {
     setActivePolyline(null);
 
     try {
-      const response = await fetch(`${FLASK_API_URL}/api/recommend-pickup`, {
+      const response = await fetch(`https://pickup-coordinator-backend.onrender.com/api/recommend-pickup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -347,7 +347,7 @@ export default function Home() {
       }
 
       try {
-        const response = await fetch(`${FLASK_API_URL}/api/upload-image`, {
+        const response = await fetch(`https://pickup-coordinator-backend.onrender.com/api/upload-image`, {
           method: "POST",
           body: formData,
         });
